@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdlibIIIFManifest.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -16,9 +17,9 @@ namespace AdlibIIIFManifest.Controllers
     }
 
     // GET api/values/5
-    public string Get(int id)
+    public Manifest Get(int id)
     {
-      return "value";
+      return new Manifest();
     }
 
     // POST api/values
