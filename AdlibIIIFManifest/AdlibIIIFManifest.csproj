@@ -131,7 +131,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CanvasClass.cs" />
+    <Compile Include="Models\ImageClass.cs" />
     <Compile Include="Models\Manifest.cs" />
+    <Compile Include="Models\MetadataClass.cs" />
+    <Compile Include="Models\RelatedClass.cs" />
+    <Compile Include="Models\SequenceClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
