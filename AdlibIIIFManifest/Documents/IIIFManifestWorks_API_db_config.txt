@@ -1,0 +1,257 @@
+ <!-- =========================================================== -->
+  <!-- ========== IIIF Manifest generator ======================== -->
+  <!-- =========================================================== -->
+  <!-- Retrieve Imagen UMIDs and descriptive metadata, form into Manifest JSON  -->    
+ <databaseConfiguration database="IIIFManifestWorks">
+  <database>collect</database>
+  <brieffields>
+	  <field>title</field>
+      <field>title.article</field>
+      <field>title.type</field>
+      <field>title.language</field>
+      <field>title.qualifier</field>
+      <field>title_date_start</field>
+      <field>title_date.type</field>
+      <field>work_type</field>
+      <field>worklevel_type</field>
+      <field>part_of_reference.lref</field>
+      <field>nfa_category</field>
+      <field>creator</field>
+	  <field>description_level_film</field>
+      <!-- IDs -->
+      <field>object_number</field>
+      <field>EIDR_identifier</field>
+
+      <!-- production country -->
+      <field>production_country</field>
+      <field>production_country.lref</field>
+
+      <!-- Subject and Genre tags -->
+      <field>content.subject.lref</field>
+      <field>content.subject</field>
+      <field>content.genre.lref</field>
+      <field>content.genre</field>
+
+      <!-- Credits -->
+      <field>credit.name</field>
+      <field>credit.name.lref</field>
+      <field>credit.cagroup</field>
+      <field>credit.type</field>
+      <field>credit.section</field>
+      <field>credit.sequence</field>
+      <field>credit.activity.sequence</field>
+      <field>credit.credited_name</field>
+      <field>credit.on_screen</field>
+
+      <!-- Cast -->
+      <field>cast.name</field>
+      <field>cast.name.lref</field>
+      <field>cast.cagroup</field>
+      <field>cast.credit_type</field>
+      <field>cast.section</field>
+      <field>cast.sequence</field>
+      <field>cast.activity.sequence</field>
+      <field>cast.credit_credited_name</field>
+      <field>cast.credit_on_screen</field>
+
+      <!-- Descriptions -->
+      <field>description</field>
+      <field>description.date</field>
+      <field>description.type</field>
+      <field>description.type.lref</field>
+
+      <!-- Groupings -->
+      <field>grouping</field>
+
+      <!-- Labels -->
+      <field>label.text</field>
+      <field>label.type</field>
+	  <field>label.source</field>
+		
+	  <!-- Restrictions -->	
+      <field>record_access.user</field>
+      <field>record_access.rights</field>
+	  <field>application_restriction</field>
+	  
+ 	  <!-- Related object data -->
+	  <field>related_object.reference
+	  	<field>object_category</field>
+	    <field>reproduction.reference
+		  <field>imagen.media.largeimage_umid</field>
+		</field>
+	  </field>
+	  
+	  <!-- Manifestation data (where Work is present) -->
+	  <field>parts_reference
+		<field>broadcast_channel</field>
+		<field>broadcast_company</field>
+		<field>grouping</field>
+		<field>runtime</field>
+		<field>runtime_seconds</field>
+	    <field>transmission_date</field>
+		<field>transmission_duration</field>
+		<field>transmission_end_time</field>
+		<field>transmission_start_time</field>
+		<field>alternative_number</field>
+		<field>alternative_number.type</field>
+		<field>file_type</field>
+		<field>priref</field>
+		<field>parts_reference
+			<field>alternative_number</field>
+			<field>alternative_number.type</field>
+			<field>file_type</field>
+			<field>priref</field>
+			<field>reproduction.reference
+				<field>reference_number</field>
+				<field>imagen.media.hls_umid</field>
+				<field>imagen.media.largeimage_umid</field>
+				<field>imagen.media.thumbnail_umid</field>
+				<field>imagen.media.referenceimage_umid</field>
+			</field>
+		</field>
+		<field>reproduction.reference
+			<field>reference_number</field>
+			<field>imagen.media.hls_umid</field>
+			<field>imagen.media.largeimage_umid</field>
+			<field>imagen.media.thumbnail_umid</field>
+			<field>imagen.media.referenceimage_umid</field>
+		</field>
+	  </field>
+	  
+	  <!-- Manifestation data (where no Work is present) -->
+	  <field>broadcast_channel</field>
+	  <field>broadcast_company</field>
+	  <field>runtime</field>
+	  <field>runtime_seconds</field>
+	  <field>transmission_date</field>
+	  <field>transmission_duration</field>
+	  <field>transmission_end_time</field>
+	  <field>transmission_start_time</field>
+  </brieffields>
+  <detailfields>
+	  <field>title</field>
+      <field>title.article</field>
+      <field>title.type</field>
+      <field>title.language</field>
+      <field>title.qualifier</field>
+      <field>title_date_start</field>
+      <field>title_date.type</field>
+      <field>work_type</field>
+      <field>worklevel_type</field>
+      <field>part_of_reference.lref</field>
+      <field>nfa_category</field>
+      <field>creator</field>
+	  <field>description_level_film</field>
+      
+	  <!-- IDs -->
+      <field>object_number</field>
+	  <field>EIDR_identifier</field>
+
+      <!-- production country -->
+      <field>production_country</field>
+      <field>production_country.lref</field>
+
+      <!-- Subject and Genre tags -->
+      <field>content.subject.lref</field>
+      <field>content.subject</field>
+      <field>content.genre.lref</field>
+      <field>content.genre</field>
+
+      <!-- Credits -->
+      <field>credit.name</field>
+      <field>credit.name.lref</field>
+      <field>credit.cagroup</field>
+      <field>credit.type</field>
+      <field>credit.section</field>
+      <field>credit.sequence</field>
+      <field>credit.activity.sequence</field>
+      <field>credit.credited_name</field>
+      <field>credit.on_screen</field>
+
+      <!-- Cast -->
+      <field>cast.name</field>
+      <field>cast.name.lref</field>
+      <field>cast.cagroup</field>
+      <field>cast.credit_type</field>
+      <field>cast.section</field>
+      <field>cast.sequence</field>
+      <field>cast.activity.sequence</field>
+      <field>cast.credit_credited_name</field>
+      <field>cast.credit_on_screen</field>
+
+      <!-- Descriptions -->
+      <field>description</field>
+      <field>description.date</field>
+      <field>description.type</field>
+      <field>description.type.lref</field>
+
+      <!-- Groupings -->
+      <field>grouping</field>
+
+      <!-- Labels -->
+      <field>label.text</field>
+      <field>label.type</field>
+	  <field>label.source</field>
+		
+	  <!-- Restrictions -->	
+      <field>record_access.user</field>
+      <field>record_access.rights</field>
+	  <field>application_restriction</field>
+	  
+ 	  <!-- Related object data -->
+	  <field>related_object.reference
+	    <field>object_category</field>
+	    <field>reproduction.reference
+		  <field>*</field>
+		</field>
+	  </field>
+	  
+	  <!-- Manifestation data (where Work is present) -->
+	  <field>parts_reference
+		<field>broadcast_channel</field>
+		<field>broadcast_company</field>
+		<field>grouping</field>
+		<field>runtime</field>
+		<field>runtime_seconds</field>
+	    <field>transmission_date</field>
+		<field>transmission_duration</field>
+		<field>transmission_end_time</field>
+		<field>transmission_start_time</field>
+		<field>alternative_number</field>
+		<field>alternative_number.type</field>
+		<field>file_type</field>
+		<field>priref</field>
+		<field>parts_reference
+			<field>alternative_number</field>
+			<field>alternative_number.type</field>
+			<field>file_type</field>
+			<field>priref</field>
+			<field>reproduction.reference
+				<field>reference_number</field>
+				<field>imagen.media.hls_umid</field>
+				<field>imagen.media.largeimage_umid</field>
+				<field>imagen.media.thumbnail_umid</field>
+				<field>imagen.media.referenceimage_umid</field>
+			</field>
+		</field>
+		<field>reproduction.reference
+			<field>reference_number</field>
+			<field>imagen.media.hls_umid</field>
+			<field>imagen.media.largeimage_umid</field>
+			<field>imagen.media.thumbnail_umid</field>
+			<field>imagen.media.referenceimage_umid</field>
+		</field>
+	  </field>
+	  
+	  <!-- Manifestation data (where no Work is present) -->
+	  <field>broadcast_channel</field>
+	  <field>broadcast_company</field>
+	  <field>runtime</field>
+	  <field>runtime_seconds</field>
+	  <field>transmission_date</field>
+	  <field>transmission_duration</field>
+	  <field>transmission_end_time</field>
+	  <field>transmission_start_time</field>
+  </detailfields>
+  <styleSheet>xslt/IIIFManifestWorks.xslt</styleSheet> 
+  </databaseConfiguration>
