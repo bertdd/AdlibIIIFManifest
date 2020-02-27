@@ -13,48 +13,26 @@ namespace AdlibIIIFManifest.Models
 
     void CreateManifest(MetadataRecord record)
     {
-      Id = record.Id(setup.ManifestUrl); 
+      Id = record.CreateIdUrl(setup.ManifestUrl); 
       Label = record.Label;
       Attribution = setup.Attribution;
       Logo = setup.LogoUrl;
 
-      Related = new RelatedClass
+      if (!string.IsNullOrWhiteSpace(setup.AISUrl))
       {
-        Id = "http://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/150038592",
-        Format = "application/html"
-      };
-
-      MetaData = new List<MetadataClass>
-      {
-        new MetadataClass
+        Related = new RelatedClass
         {
-          Label = "Director",
-          Value = "Powell, Michael"
-        },
+          Id = record.CreateIdUrl(setup.AISUrl),
+          Format = "application/html"
+        };
+      }
 
-        new MetadataClass
-        {
-          Label = "Date",
-          Value = "1934-01-22"
-        },
-
-        new MetadataClass
-        {
-          Label = "Genre",
-          Value = "Crime"
-        },
-
-        new MetadataClass
-        {
-          Label =  "Subject",
-        }
-      };
+      MetaData = record.MetaData;
 
       Sequences = new List<SequenceClass>
       {
         new SequenceClass
         {
-          Type= "sc:Sequence",
           Canvases = new List<CanvasClass>
           {
             new CanvasClass

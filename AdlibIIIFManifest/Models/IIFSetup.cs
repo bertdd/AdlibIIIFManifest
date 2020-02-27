@@ -8,5 +8,7 @@
     public string Attribution { get; set; } = "BFI National Archive Special Collections";
 
     public string ManifestUrl { get; set; } = "http://bk-img-data1:3000/works/{0}/manifest";
+
+    public string AISUrl { get; set; } = "http://collections-search.bfi.org.uk/web/Details/ChoiceFilmWorks/{0}";
   }
 }
