@@ -3,12 +3,14 @@ using System.Web.Http;
 
 namespace AdlibIIIFManifest.Controllers
 {
+  [RoutePrefix("")]
   public class ValuesController : ApiController
   {
-    // GET api/values/5
-    public ManifestClass Get(int id)
+    [Route("works/{priref}/manifest")]
+    [HttpGet]
+    public ManifestClass Works(int priref)
     {
-      return new ManifestClass(id);
+      return new ManifestClass(priref);
     }
   }
 }

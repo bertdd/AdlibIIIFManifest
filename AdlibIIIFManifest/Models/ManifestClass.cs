@@ -95,6 +95,6 @@ namespace AdlibIIIFManifest.Models
     [JsonProperty("sequences")]
     public List<SequenceClass> Sequences { get; set; }
 
-    IIFSetup setup = new IIFSetup();
+    readonly IIFSetup setup = new IIFSetup();
   }
 }
