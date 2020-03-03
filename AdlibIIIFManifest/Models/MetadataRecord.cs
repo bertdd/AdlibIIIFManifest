@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using AdlibIIIFManifest.Database;
+using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AdlibIIIFManifest.Models
 {
@@ -8,6 +10,16 @@ namespace AdlibIIIFManifest.Models
     public MetadataRecord(int priref)
     {
       Priref = priref;
+
+      var task = Task.Run(() => works.GetWork(priref));
+      task.Wait();
+      var result = task.Result;
+      if (result != null)
+      {
+        Title = result.Title;
+        Creator = result.Director;
+        Date = result.Date;
+      }
     }
 
     public string Label
@@ -50,6 +62,7 @@ namespace AdlibIIIFManifest.Models
 
     public string CreateIdUrl(string manifestUrl) => string.Format(manifestUrl, Priref);
 
+    public Works works = new Works();
 
     public List<MetadataClass> MetaData =>
       new List<MetadataClass>
