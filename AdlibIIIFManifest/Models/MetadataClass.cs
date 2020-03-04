@@ -9,5 +9,7 @@ namespace AdlibIIIFManifest.Models
 
     [JsonProperty("value")]
     public string Value { get; set; }
+
+    public override string ToString() => $"{Label} = {Value}";
   }
 }

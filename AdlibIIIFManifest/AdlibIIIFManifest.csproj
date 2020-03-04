@@ -128,7 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="Database\Work.cs" />
+    <Compile Include="Database\WorkRecord.cs" />
     <Compile Include="Database\Works.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -136,6 +136,7 @@
     <Compile Include="Models\CanvasClass.cs" />
     <Compile Include="Models\IIFSetup.cs" />
     <Compile Include="Models\ImageClass.cs" />
+    <Compile Include="Models\IMetaData.cs" />
     <Compile Include="Models\ManifestClass.cs" />
     <Compile Include="Models\MetadataClass.cs" />
     <Compile Include="Models\MetadataRecord.cs" />

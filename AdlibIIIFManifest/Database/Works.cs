@@ -7,7 +7,7 @@ namespace AdlibIIIFManifest.Database
 {
   public class Works
   {
-    public async Task<Work> GetWork(int priref)
+    public async Task<WorkRecord> GetWork(int priref)
     {
       using (var client = new HttpClient())
       {
@@ -17,7 +17,7 @@ namespace AdlibIIIFManifest.Database
         {
           using (var stream = await response.Content.ReadAsStreamAsync())
           {
-            return new Work(XDocument.Load(stream));
+            return new WorkRecord(XDocument.Load(stream));
           }
         }
       }

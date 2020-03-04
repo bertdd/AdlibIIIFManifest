@@ -11,7 +11,7 @@ namespace AdlibIIIFManifest.Models
       CreateManifest(record);
     }
 
-    void CreateManifest(MetadataRecord record)
+    void CreateManifest(IMetaData record)
     {
       Id = record.CreateIdUrl(setup.ManifestUrl); 
       Label = record.Label;
@@ -55,7 +55,6 @@ namespace AdlibIIIFManifest.Models
                     Id = "http://bk-ci-web:8182/iiif/2/0x060a2b340101010201010f121374bcc2383dd102728305801c56645106EF7E9C/full/full/0/default.jpg",
                     Service = new ServiceClass
                     {
-                      Context = Context,
                       Id = "http://bk-ci-web:8182/iiif/2/0x060a2b340101010201010f121374bcc2383dd102728305801c56645106EF7E9C",
                       Profile = "http://iiif.io/api/image/2/level2.json"
                     }
