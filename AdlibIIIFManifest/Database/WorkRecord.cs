@@ -1,5 +1,4 @@
 ﻿using AdlibIIIFManifest.Models;
-using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml.Linq;
@@ -41,6 +40,12 @@ namespace AdlibIIIFManifest.Database
             }
           }
         }
+      }
+
+      var description = record.Element("Description");
+      if (description != null)
+      {
+        Description = description.Element("description")?.Value;
       }
 
       var credits = record.Elements("credits");
@@ -106,6 +111,7 @@ namespace AdlibIIIFManifest.Database
     public List<MetadataClass> MetaData { get; private set; } = new List<MetadataClass>();
     public int Priref { get; private set; }
     public string Title { get; private set; }
+    public string Description { get; private set; }
     public string Director { get; private set; }
     public string Date { get; private set; }
   }

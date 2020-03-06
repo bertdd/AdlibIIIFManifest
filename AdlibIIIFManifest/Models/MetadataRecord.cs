@@ -20,6 +20,8 @@ namespace AdlibIIIFManifest.Models
 
     public List<MetadataClass> MetaData => Work.MetaData;
 
+    public string Description => Work.Description;
+
     public string CreateIdUrl(string manifestUrl) => Work.CreateIdUrl(manifestUrl);
   }
 }

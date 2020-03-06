@@ -15,6 +15,7 @@ namespace AdlibIIIFManifest.Models
     {
       Id = record.CreateIdUrl(setup.ManifestUrl); 
       Label = record.Label;
+      Description = record.Description;
       Attribution = setup.Attribution;
       Logo = setup.LogoUrl;
 
@@ -78,6 +79,9 @@ namespace AdlibIIIFManifest.Models
 
     [JsonProperty("label")]
     public string Label { get; set; }
+
+    [JsonProperty("description")]
+    public string Description { get; set; }
 
     [JsonProperty("attribution")]
     public string Attribution { get; set; }

@@ -7,6 +7,8 @@ namespace AdlibIIIFManifest.Models
     string CreateIdUrl(string manifestUrl);
 
     string Label { get; }
+
+    string Description { get; }
     
     List<MetadataClass> MetaData { get; }
   }

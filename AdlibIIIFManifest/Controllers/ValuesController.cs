@@ -1,5 +1,6 @@
 ﻿using AdlibIIIFManifest.Models;
 using System.Web.Http;
+using System.Web;
 
 namespace AdlibIIIFManifest.Controllers
 {
@@ -10,6 +11,7 @@ namespace AdlibIIIFManifest.Controllers
     [HttpGet]
     public ManifestClass Works(int priref)
     {
+      HttpContext.Current.Response.AppendHeader("Access-Control-Allow-Origin", "*");
       return new ManifestClass(priref);
     }
   }
